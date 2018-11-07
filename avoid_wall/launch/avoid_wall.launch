@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="avoid_wall" type="avoid_wall.py" name="avoid_wall"  output="screen">
+  </node>
+</launch>
