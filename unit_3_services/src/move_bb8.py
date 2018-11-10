@@ -43,17 +43,22 @@ class MoveBB8:
         time.sleep(move_time)
         self.stop()
         
-    def move_square(self):
-        i = 0
-        while not self.ctrl_c and i < 4:
-           # Move Forwards
-            self.move_x_time(move_time=2.0, linear=0.2, angular=0.0)
-            # Stop
-            self.move_x_time(move_time=4.0, linear=0.0, angular=0.0)
-            # Turn 
-            self.move_x_time(move_time=3.5, linear=0.0, angular=0.2)
-            # linear
-            self.move_x_time(move_time=0.1, linear=0.0, angular=0.0)
+    def move_square(self, side = 1, repetitions = 1):
+        k = 0
+        while not self.ctrl_c and k < repetitions:
+            k += 1
+            i = 0
+            while not self.ctrl_c and i < 4:
+                i += 1
+                # Move Forwards
+                self.move_x_time(move_time=2.0*side, linear=0.2, angular=0.0)
+                # Stop
+                self.move_x_time(move_time=4.0, linear=0.0, angular=0.0)
+                # Turn 
+                self.move_x_time(move_time=3.5, linear=0.0, angular=0.2)
+                # linear
+                self.move_x_time(move_time=0.1*side, linear=0.0, angular=0.0)
+           
         
     
         
