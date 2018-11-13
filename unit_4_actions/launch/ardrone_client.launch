@@ -1,0 +1,9 @@
+<launch>
+  
+  <node pkg="unit_4_actions" 
+        type="ardrone_action_client.py"
+        name="ardrone_action_client" 
+        output="screen">
+  </node>
+
+</launch>
